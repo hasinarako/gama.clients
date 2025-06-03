@@ -1,7 +1,7 @@
 
 class GAMA {
     host = "";
-    modelPath = 'gama/msi.gama.models/models/Tutorials/Road Traffic/models/Model 05.gaml';
+    modelPath = 'C:/Users/rhmha/Downloads/GAMA_2025.05.4_Windows_with_JDK_10.05.25_f9040ca/headless/samples/roadTraffic/models/model7.gaml';
     experimentName = 'road_traffic';
 
 
@@ -19,7 +19,7 @@ class GAMA {
     logger;
     constructor(address, md, exp) {
         this.host = address;
-        this.modelPath = md;
+        this.modelPath = modelPath;
         this.experimentName = exp;
     }
     connect(opened_callback, closed_callback) {
@@ -198,7 +198,7 @@ class GAMA {
         this.execute(this.status, function (e) {
 
             var result = JSON.parse(e);
-            // console.log(result);
+            console.log(result);
             // if(result.type==="CommandExecutedSuccessfully"){
             if (result.type === "CommandExecutedSuccessfully" && result.content) myself.exp_id = result.content;
             if (c) {

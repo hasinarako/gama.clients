@@ -14,14 +14,14 @@ var show3DBuilding = Boolean(false);
 //GAMA PATH
 
 // var ABSOLUTE_PATH_TO_GAMA = '/Users/hqn88/git/';
-var ABSOLUTE_PATH_TO_GAMA = '/Users/arno/git/'
+var ABSOLUTE_PATH_TO_GAMA = '"C:\Users\rhmha\Downloads\GAMA_2025.05.4_Windows_with_JDK_10.05.25_f9040ca.exe"'
 
-var modelPath = '/Users/arno/Projects/GitHub/SaReine/SaReine/models/Plan_des_pistes.gaml';
+var modelPath = 'C:\Users\rhmha\Downloads\GAMA_2025.05.4_Windows_with_JDK_10.05.25_f9040ca\configuration\org.eclipse.osgi\29\0\.cp\models\Tutorials\Predator Prey\models\Model 01.gaml';
 //var modelPath = '/Users/arno/Projects/GitHub/I-Maroc/IMaroc_GAMA/models/Population_Mobility_DataViz.gaml';
 var experimentName = 'demo';
-var species1Name = 'people';
+var species1Name = 'prey';
 var attribute1Name = 'objective';
-var species2Name = 'building';
+var species2Name = 'predator';
 var attribute2Name = 'type';
 
 

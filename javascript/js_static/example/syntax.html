@@ -13,6 +13,7 @@
 			padding: 0;
 		}
 	</style>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
 
 </head>
 
@@ -20,7 +21,7 @@
 	Host: <input type="text" id="host" value='localhost'/><br>
 	Socket port: <input type="text" id="socket" value='1000'/><br>
 
-	Model path: <input type="text" id="model" value='/Users/hqn88/git/gama/msi.gama.models/models/Tutorials/Road Traffic/models/Model 05.gaml'/><br>
+	Model path: <input type="text" id="model" value='C:/Users/rhmha/Downloads/GAMA_2025.05.4_Windows_with_JDK_10.05.25_f9040ca/headless/samples/roadTraffic/models/model7.gaml'/><br>
 	Experiment name: <input type="text" id="exp_name" value='road_traffic'/><br>
 
 	<button onclick="connect()">Connect</button>
@@ -29,7 +30,40 @@
 	<button onclick="step()">Step</button>
 	<button onclick="eval()">Eval</button>
 	<button onclick="reload()">Reload</button>
+
+	<div id="map">hello</div>
+
+	<script>
+	d3.json("./../GeoJson/road.geojson")
+		.then(function(data) {
+		const projection = d3.geoMercator()
+		.center([0, 0]) // Set the center coordinates of the map
+		.scale(1000) // Adjust the scale to fit the map nicely
+		.translate([800 / 2, 600 / 2]); // Set the translation to center the map
+		const svg = d3.select("#map")
+		.append("svg")
+		.attr("width", 800)
+		.attr("height", 600);
+
+		svg.selectAll("path")
+		.data(data.features)
+		.enter()
+		.append("path")
+		.attr("d", pathGenerator)
+		.style("fill", "steelblue")
+		.style("stroke", "white");
+		})
+		.catch(function(error) {
+		// Error occurred while loading the data
+		console.error(error);
+		});
+
+
+	</script>
+
 	<div id="output"></div>
+
+
 	<script src="./../dev/GAMA.js"></script>
 	<script src="./../js/simple_syntax.js"></script>
 </body>

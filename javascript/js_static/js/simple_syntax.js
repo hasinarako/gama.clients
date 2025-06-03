@@ -1,9 +1,9 @@
 
-// var ABSOLUTE_PATH_TO_GAMA = 'C:\\git\\';
+// var ABSOLUTE_PATH_TO_	 = 'C:\\git\\';
 // var modelPath = ABSOLUTE_PATH_TO_GAMA + 'gama/msi.gama.models/models/Tutorials/Road Traffic/models/Model 05.gaml'; 
 // var modelPath =  '/var/www/github/gama/msi.gama.models/models/Tutorials/Road Traffic/models/Model 05.gaml';
 
-var modelPath='/Users/hqn88/git/gama/msi.gama.models/models/Tutorials/Road Traffic/models/Model 05.gaml';
+var modelPath='C:/Users/rhmha/Downloads/GAMA_2025.05.4_Windows_with_JDK_10.05.25_f9040ca/headless/samples/roadTraffic/models/model7.gaml';
 var experimentName = 'road_traffic';
 // const experiment = new GAMA("ws://51.255.46.42:6001/", modelPath, experimentName);
 var experiment=null;
